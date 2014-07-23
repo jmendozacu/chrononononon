@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+
+    <modules>
+        <Atwix_Printedorders_Model_Invoice>
+            <version>0.0.1</version>
+        </Atwix_Printedorders_Model_Invoice>
+    </modules>
+
+<models>
+    <sales>
+        <rewrite>                    
+            <order_pdf_invoice>Atwix_Printedorders_Model_Invoice</order_pdf_invoice>
+        </rewrite>
+    </sales>
+</models>
+</config>

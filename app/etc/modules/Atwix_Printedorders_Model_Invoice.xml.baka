@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+	 <Atwix_Printedorders_Model_Invoice>
+	 <active>true</active>
+	 <codePool>local</codePool>
+	 </Atwix_Printedorders_Model_Invoice>
+	</modules>
+</config>

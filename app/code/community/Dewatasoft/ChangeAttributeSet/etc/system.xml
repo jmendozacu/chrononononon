@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+	  <sections>
+		<changeattributeset  translate="label" module="changeattributeset">                    
+			<label>Dewatasoft,inc</label>
+			<tab>catalog</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>0</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+                <default translate="label comment" module="changeattributeset">
+                    <label>Configuration</label>
+					<comment>
+            			<![CDATA[<p style="background-color: #EEE2BE; border: 1px solid orange;font-weight: bold; padding: 20px;">This ext used to change attribute set of one or multi products with easier...<br/>
+						This ext developed by Dewatasoft,INC		<a href="http://www.dewatasoft.com" target="_blank">Dewatasoft,inc</a><br /></p>]]>
+            		</comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+                    <fields>                        
+                        <enable>
+						<label>Enable</label>
+						<frontend_type>select</frontend_type>
+						<source_model>adminhtml/system_config_source_yesno</source_model>
+						<sort_order>0</sort_order>
+						<show_in_default>1</show_in_default>
+						<show_in_website>1</show_in_website>
+						<show_in_store>1</show_in_store>
+                        </enable>
+                    </fields>
+                </default>
+			</groups>
+		</changeattributeset>
+	  </sections>
+</config>

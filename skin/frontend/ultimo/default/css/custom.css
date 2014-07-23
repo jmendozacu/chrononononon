@@ -1,0 +1,21 @@
+.product-view .btn-cart span,
+button.btn-checkout span
+{
+        background-color: #5f82d4;
+        color: #ffffff;
+}
+.product-view .btn-cart:hover span,
+button.btn-checkout:hover span
+{
+        background-color: #87a1df;
+        color: #000000;
+}
+
+
+/*.price-box .price*/
+.price-box .regular-price .price,
+.price-box .minimal-price .price { color: #000000; }
+
+/*.price-box .price*/
+/*.price-box .regular-price .price,*/
+/*.price-box .minimal-price .price { color: #00a9c7; }*/

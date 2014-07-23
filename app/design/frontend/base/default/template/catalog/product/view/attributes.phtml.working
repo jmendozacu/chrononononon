@@ -1,0 +1,87 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product additional attributes template
+ *
+ * @see Mage_Catalog_Block_Product_View_Attributes
+ */
+?>
+<?php
+    $_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct()
+?>
+<?php if($_additional = $this->getAdditionalData()): ?>
+    <h2><?php echo $this->__('Additional Information') ?></h2>
+    <table class="data-table" id="product-attribute-specs-table">
+        <col width="15%" />
+	<col width="35%" />
+        <col width="15%" />
+	<col width="35%" />
+        <tbody>
+
+
+<?php
+/**
+*$_downtown = array_filter($_additional); 
+*/
+?>
+
+<?php foreach ($_additional as $_data): ?>
+    <?php $_attribute = $_product->getResource()->getAttribute($_data['code']);
+    if (!is_null($_product->getData($_attribute->getAttributeCode())) || ((string)$_attribute->getFrontend()->getValue($_product) == '')) {
+	
+	unset($_additional[$_data]); 
+  }	
+
+	 ?>
+
+<?php endforeach; ?>
+
+<?php $new_array = array_values($_additional); ?>
+
+        <?php $_values = array_values($new_array); ?>
+        <?php for($i = 0; $i < count($new_array); $i+=2): ?>
+            <?php $_fdata1 = $_values[$i]; ?>
+            <?php $_fdata2 = isset($_values[$i + 1]) ? $_values[$i + 1] : null; ?>
+            <tr>
+                <th class="label"><?php echo $this->htmlEscape($this->__($_fdata1['label'])) ?></th>
+                <td class="data"><?php echo $_helper->productAttribute($_product, $_fdata1['value'], $_fdata1['code']) ?></td>
+                <?php if ($_fdata2) : ?>
+                <th class="label"><?php echo $this->htmlEscape($this->__($_fdata2['label'])) ?></th>
+                <td class="data"><?php echo $_helper->productAttribute($_product, $_fdata2['value'], $_fdata2['code']) ?></td>
+                <?php else : ?>
+                <th class="label"></th>
+                <td class="data"></td>
+                <?php endif; ?>
+            </tr>
+        <?php endfor; ?>
+
+
+        </tbody>
+    </table>
+    <script type="text/javascript">decorateTable('product-attribute-specs-table')</script>
+<?php endif;?>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Dewatasoft_ChangeAttributeSet>
+			<version>1.0.0</version>
+		</Dewatasoft_ChangeAttributeSet>
+	</modules>
+	
+	<global>
+        <models>
+            <dewatasoft_changeattributeset>
+                <class>Dewatasoft_ChangeAttributeSet_Model</class>
+            </dewatasoft_changeattributeset>
+		</models>
+		
+		<helpers>
+		  <changeattributeset>
+			<class>Dewatasoft_ChangeAttributeSet_Helper</class>
+		  </changeattributeset>
+		</helpers>
+	</global>
+    <adminhtml>        
+        <events>
+            <adminhtml_block_html_before>
+                <observers>
+                    <dewatasoft_changeattributeset>
+                        <type>singleton</type>
+                        <class>dewatasoft_changeattributeset/observer</class>
+                        <method>addMassactionToProductGrid</method>
+                    </dewatasoft_changeattributeset>
+                </observers>
+            </adminhtml_block_html_before>
+		</events>  
+		<translate>
+            <modules>
+                <Dewatasoft_ChangeAttributeSet>
+                      <files>
+                           <default>Dewatasoft_ChangeAttributeSet.csv</default>
+                      </files>
+                </Dewatasoft_ChangeAttributeSet>
+            </modules>
+       </translate>	
+    </adminhtml>
+	<default>
+        <changeattributeset>
+            <default>
+                <enable>1</enable>
+            </default>
+        </changeattributeset>
+    </default>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Dewatasoft_ChangeAttributeSet before="Mage_Adminhtml">Dewatasoft_ChangeAttributeSet_Adminhtml</Dewatasoft_ChangeAttributeSet>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>		
+		
+</config>

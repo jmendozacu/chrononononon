@@ -16,6 +16,71 @@ button.btn-checkout:hover span
 .price-box .regular-price .price,
 .price-box .minimal-price .price { color: #000000; }
 
+.block-layered-nav dt {
+    background: none repeat scroll 0 0 #000;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.block-layered-nav dd {
+    border: 1px solid #ccc;
+    margin: 0 0 6px;
+    padding: 5px 0 10px 5px;
+}
+
+.products-grid .price-box {
+    float: left;
+	width: 92px;
+    font-size: 1.5em;
+	bottom: -5px !important;
+position: relative;
+}
+
+.item div.actions{
+	bottom: 3px !important;
+    padding-left: 0 !important;
+	float: left;
+	margin: 0 !important;
+	position: relative !important;	
+}
+
+.products-grid.centered .item  {
+	text-align: left !important;
+}
+
+.products-grid .product-name {
+	font-size: 1.333em
+}
+
+@media all and (max-width: 360px) {
+.products-grid .product-name { font-size:1.3em; }
+}
+
+@media all and (min-width: 360px) and (max-width: 767px) {
+	.products-grid .product-name { font-size:1.3em; }
+}
+
+ul.products-grid li {
+	border: 1px solid #ccc !important;
+}
+
+.itemgrid-3col .item {
+    width: 30.333% !important;
+}
+
+.itemgrid .item {
+    margin: 1px;
+}
+
+.itemgrid-4col .item {
+	width: 22% !important
+}
+
+/*.itemgrid.itemgrid-adaptive .item {
+     width: 46%;
+}*/
 /*.price-box .price*/
 /*.price-box .regular-price .price,*/
 /*.price-box .minimal-price .price { color: #00a9c7; }*/

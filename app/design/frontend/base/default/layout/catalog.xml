@@ -214,6 +214,7 @@ Product view
                 </block>
                 <block type="catalog/product_view" name="product.info.addto" as="addto" template="catalog/product/view/addto.phtml"/>
                 <block type="catalog/product_view" name="product.info.addtocart" as="addtocart" template="catalog/product/view/addtocart.phtml"/>
+				<block type="catalog/product_view" name="product.info.authenticity" as="authenticity" template="catalog/product/view/authenticity.phtml"/>
 
                 <block type="core/text_list" name="product.info.extrahint" as="extrahint" translate="label">
                     <label>Product View Extra Hint</label>
@@ -236,6 +237,7 @@ Product view
                     <block type="catalog/product_view" name="product.clone_prices" as="prices" template="catalog/product/view/price_clone.phtml"/>
                     <action method="append"><block>product.info.addtocart</block></action>
                     <action method="append"><block>product.info.addto</block></action>
+					<action method="append"><block>product.info.authenticity</block></action>
                 </block>
 
                 <block type="core/template_facade" name="product.info.container1" as="container1">

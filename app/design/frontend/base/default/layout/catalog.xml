@@ -36,6 +36,7 @@ Supported layout update handles (special):
 - catalog_product_view
 
 -->
+2.2
 <layout version="0.1.0">
 
 <!--

@@ -154,6 +154,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
 .img-box .itemslider-thumbnails { margin-left: auto; margin-right: auto; }
-.itemslider-thumbnails			{ max-width:237px; } /* count-3 is default */
+.itemslider-thumbnails			{ max-width:337px; } /* count-3 is default */
 .itemslider-thumbnails.count-1	{ max-width:79px; }
 .itemslider-thumbnails.count-2	{ max-width:158px; }
